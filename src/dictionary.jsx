@@ -20,7 +20,8 @@ const Dictionary = () => {
         
     }
     const onClick=()=>{
-        const search= dict.find((a)=>a.word==input)
+        const lowercaseText=input.toLowerCase()
+        const search= dict.find((a)=>a.word.toLocaleLowerCase()==lowercaseText)
        
         if (search) {
             console.log("entered if")
